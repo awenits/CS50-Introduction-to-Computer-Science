@@ -1,0 +1,16 @@
+1.  stdint.h is a header file in the C standard library that defines BYTE, DWORD, LONG and WORD data types.
+2.  These data types are essentially aliases for C/C++ primitive data types. It makes clear that you intend to use the data a specific way.
+	uint24_t means an integer that is exactly 24 bits wide.
+3.  1 byte, 4 byte, 4 byte, 2 byte.
+4.  The first two bytes of a BMP is a WORD and denotes hexadecimal 0x4D42. 
+5.  bfSize specifies the size of a file that contains a DIB [device-independent bitmap] and biSize specifies the size in bytes, of the BITMAPINFOHEADER.
+6.  If biHeight is negative, the bitmap is a top-down DIB (device-independent bitmap)
+	and its origin is the upper left corner.
+7.  The biBitCount member of the BITMAPINFOHEADER structure determines the BMP's color depth.
+8.  fopen might return NULL in line 24 if the file mentioned in its braces is not available and in line 32 it will return NULL,
+    if it can't create the file (no memory space available).
+9.  I think it is because the program is reading in 1 RGBTRIPLET OR 1 BITMAPINFOHEADER or 1 BITMAPFILEHEADER at a time.
+10. value 3 will be assigned to padding.
+11. Skips over any padding and looks for the next pixel (RGB triple).
+12. This is an integer constant which, when used as the whence argument to the fseek or fseeko function,
+	specifies that the offset provided is relative to the current file position.
